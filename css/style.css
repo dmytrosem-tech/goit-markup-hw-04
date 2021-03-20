@@ -196,7 +196,10 @@ ul {
   margin-right: 50px;
 }
 
-.authoriz-nav .link {
+.authoriz-nav .link-mail,
+.authoriz-nav .link-tel {
+  display: inline-flex;
+  align-items: center;
   color: var(--main-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -205,8 +208,10 @@ ul {
   text-decoration: none;
 }
 
-.authoriz-nav .link:hover,
-.authoriz-nav .link:focus {
+.authoriz-nav .link-mail:hover,
+.authoriz-nav .link-mail:focus,
+.authoriz-nav .link-tel:hover,
+.authoriz-nav .link-tel:focus {
   color: var(--alternative-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -215,8 +220,8 @@ ul {
 }
 
 .authoriz-nav {
-  display: flex;
-  flex-direction: row;
+  display: inline-flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   margin-bottom: 0;
@@ -225,10 +230,28 @@ ul {
   margin-right: 0;
 }
 
+/*.authoriz-nav .link-mail::before {
+  content: "";
+  height: 12px;
+  width: 16px;
+  margin-right: 10px;
+  background-image: url(../images/envelope\ \(hover\).png);
+  background-size: contain;
+}
+
+.authoriz-nav .link-tel::before {
+  content: "";
+  height: 16px;
+  width: 10px;
+  margin-right: 10px;
+  background-image: url(../images/Vector.png);
+  background-size: contain;
+}*/
+
 /* Main page */
-/* Главная часть */
 
 .section-hero {
+  max-width: 1600px;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -236,7 +259,11 @@ ul {
   margin-right: auto;
 
   height: 600px;
-  background: var(--bg-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg1\\(1\).jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--bg-color);
 }
 
 .section-hero .title {
@@ -255,7 +282,33 @@ ul {
   padding-bottom: 0;
 }
 
-.our-principles .priciples-list-item + .priciples-list-item {
+.our-principles .item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-color: #f5f4fa;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}
+
+.sputnik::before {
+  background-image: url(../images/sputnic.png);
+}
+
+.clock::before {
+  background-image: url(../images/clock.png);
+}
+
+.pc::before {
+  background-image: url(../images/pc.png);
+}
+
+.cosmonaut::before {
+  background-image: url(../images/cosmonaut.png);
+}
+
+.our-principles .item + .item {
   margin-left: 30px;
 }
 
