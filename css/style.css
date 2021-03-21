@@ -431,6 +431,11 @@ ul {
   fill: var(--main-text-color);
 }
 
+.client-list .link:hover,
+.client-list .link:focus {
+  color: var(--alternative-text-color);
+}
+
 .icon-client:hover,
 .icon-client:focus {
   fill: var(--alternative-text-color);
