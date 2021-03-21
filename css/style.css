@@ -230,37 +230,34 @@ ul {
   margin-right: 0;
 }
 
-/*.authoriz-nav .link-mail::before {
-  content: "";
+.authoriz-nav .link-mail::before {
+  content: '';
   height: 12px;
   width: 16px;
   margin-right: 10px;
-  background-image: url(../images/envelope\ \(hover\).png);
+  background-image: url(../images/envelope\\(hover\).png);
   background-size: contain;
 }
 
 .authoriz-nav .link-tel::before {
-  content: "";
+  content: '';
   height: 16px;
   width: 10px;
   margin-right: 10px;
   background-image: url(../images/Vector.png);
   background-size: contain;
-}*/
+}
 
 /* Main page */
 
 .section-hero {
-  max-width: 1600px;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
 
-  height: 600px;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/bg1\\(1\).jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--bg-color);
@@ -471,12 +468,16 @@ ul {
 
 /* footer section*/
 .footer {
+  display: flex;
   margin-right: auto;
   margin-left: auto;
 
   background-color: var(--bg-color);
   color: var(--main-text-color);
-  height: 252px;
+}
+
+.footer-case {
+  display: inline-flex;
 }
 
 .footer-address {
@@ -536,3 +537,54 @@ ul {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
+
+.socials {
+  padding-top: 72px;
+  padding-bottom: 100px;
+  margin-left: 70px;
+}
+
+.socials-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-words);
+}
+
+.socials-list {
+  display: inline-flex;
+}
+
+.socials-list .item + .item {
+  margin-left: 10px;
+}
+
+.socials-list .item {
+  display: inline-flex;
+  height: 44px;
+  width: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.socials-list .icon-insta {
+  background-image: url(../images/instagram.svg);
+}
+
+.socials-list .icon-twitter {
+  background-image: url(../images/twitter.svg);
+}
+.socials-list .icon-facebook {
+  background-image: url(../images/facebook.svg);
+}
+.socials-list .icon-linkin {
+  background-image: url(../images/linkin.svg);
+}
+
+
+
