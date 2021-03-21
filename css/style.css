@@ -402,6 +402,44 @@ ul {
   justify-content: center;
 }
 
+.clients-list .link {
+  width: 160px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-list .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--main-text-color);
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-list .item:hover,
+.clients-list .item:focus {
+  border: 1px solid var(--alternative-text-color);
+}
+
+.icon-client {
+  fill: var(--main-text-color);
+}
+
+.icon-client:hover,
+.icon-client:focus {
+  fill: var(--alternative-text-color);
+}
+
+.clients-list .item + .item {
+  margin-left: 30px;
+}
+
 /* Portfolio */
 
 .portfolio-page {
@@ -592,15 +630,15 @@ ul {
 }
 
 .socials-list .icon-insta {
-  background-image: url(../images/instagram.svg);
+  background-image: url(../images/instagram-footer.svg);
 }
 
 .socials-list .icon-twitter {
-  background-image: url(../images/twitter.svg);
+  background-image: url(../images/twitter-footer.svg);
 }
 .socials-list .icon-facebook {
-  background-image: url(../images/facebook.svg);
+  background-image: url(../images/facebook-footer.svg);
 }
 .socials-list .icon-linkin {
-  background-image: url(../images/linkin.svg);
+  background-image: url(../images/linkedin-footer.svg);
 }
