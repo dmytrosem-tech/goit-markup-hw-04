@@ -84,6 +84,10 @@ ul {
   padding-inline-start: 0;
 }
 
+a {
+  outline: none;
+}
+
 /* Buttons */
 
 .button {
@@ -99,9 +103,10 @@ ul {
 }
 
 .button:hover,
-.button:hover {
+.button:focus {
   background-color: var(--alternative-text-color);
   color: var(--white-words);
+  outline: none;
 }
 
 .primary {
@@ -176,6 +181,7 @@ ul {
 
 .site-nav .link:hover,
 .site-nav .link:focus {
+  outline: none;
   color: var(--alternative-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -193,7 +199,9 @@ ul {
 
 /* authoriz-nav*/
 .authoriz-nav > .mail {
+  display: flex;
   margin-right: 50px;
+
 }
 
 .authoriz-nav .link-mail,
@@ -201,6 +209,7 @@ ul {
   display: inline-flex;
   align-items: center;
   color: var(--main-text-color);
+  fill: var(--main-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2px;
@@ -208,10 +217,26 @@ ul {
   text-decoration: none;
 }
 
+.icon-mail-header {
+  margin-right: 10px;
+}
+
+.icon-phone-header {
+  margin-right: 10px;
+}
+
+.icon-mail-header:hover,
+.icon-mail-header:focus {
+  fill: var(--alternative-text-color);
+}
+
+.authoriz-nav .icon-mail-header:focus, 
 .authoriz-nav .link-mail:hover,
 .authoriz-nav .link-mail:focus,
 .authoriz-nav .link-tel:hover,
 .authoriz-nav .link-tel:focus {
+  fill: var(--alternative-text-color);
+  outline: none;
   color: var(--alternative-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -228,24 +253,6 @@ ul {
   margin-top: 0;
   margin-left: auto;
   margin-right: 0;
-}
-
-.authoriz-nav .link-mail::before {
-  content: '';
-  height: 12px;
-  width: 16px;
-  margin-right: 10px;
-  background-image: url(../images/envelope.png);
-  background-size: contain;
-}
-
-.authoriz-nav .link-tel::before {
-  content: '';
-  height: 16px;
-  width: 10px;
-  margin-right: 10px;
-  background-image: url(../images/Vector.png);
-  background-size: contain;
 }
 
 /* Main page */
@@ -354,13 +361,10 @@ ul {
   border-radius: 0px 0px 4px 4px;
 }
 
-.worker-image {
-  margin-bottom: 30px;
-}
-
 .workers-title {
   margin: 30px auto 10px;
   text-align: center;
+
   width: 152px;
   color: var(--title-text-color);
   font-style: normal;
@@ -371,16 +375,51 @@ ul {
 }
 
 .workers .text {
-  /* margin-bottom: 30px; */
-  margin: 30px auto 90px;
-
+  margin: 10px auto 16px;
   text-align: center;
+
   width: 147px;
   color: var(--main-text-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
+}
+
+.workers-socials-list {
+  display: flex;
+  text-align: center;
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 30px;
+
+}
+
+.workers-socials-list .item {
+  width: 45px;
+  height: 45px;
+  box-shadow: none;
+}
+
+.workers-socials-list .item + .item {
+  margin-left: 10px;
+}
+
+.workers-socials-list .link {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  fill: #AFB1B8;
+  width: 44px;
+  height: 44px;
+}
+
+.workers-socials-list .link:hover,
+.workers-socials-list .link:focus {
+  fill: var(--white-words);
+  background-color: var(--alternative-text-color);
+  border-radius: 50%;
+  
 }
 
 .clients {
@@ -403,43 +442,40 @@ ul {
 }
 
 .clients-list .link {
-  width: 160px;
-  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  fill: var(--main-text-color);
+
+  width: 169px;
+  height: 89px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+} 
+
+.clients-list .link:hover,
+.clients-list .link:focus  {
+  fill: var(--alternative-text-color);
+  border: none;
+} 
 
 .clients-list .item {
   display: flex;
   align-items: center;
   justify-content: center;
-
+ 
   color: var(--main-text-color);
   width: 170px;
   height: 90px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-}
-
-.clients-list .item:hover,
-.clients-list .item:focus {
+  
+} 
+ 
+.clients-list .link:hover,
+.clients-list .link:focus {
+  outline: none;
   border: 1px solid var(--alternative-text-color);
-}
 
-.icon-client {
-  fill: var(--main-text-color);
-}
-
-.client-list .link:hover,
-.client-list .link:focus {
-  color: var(--alternative-text-color);
-}
-
-.icon-client:hover,
-.icon-client:focus {
-  fill: var(--alternative-text-color);
-}
+} 
 
 .clients-list .item + .item {
   margin-left: 30px;
@@ -647,3 +683,4 @@ ul {
 .socials-list .icon-linkin {
   background-image: url(../images/linkedin-footer.svg);
 }
+
